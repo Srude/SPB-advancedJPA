@@ -80,5 +80,11 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
     List<ProductEntity> findByNameIsEndingWith(String name);
 
 
+    List<ProductEntity> findByNameOrderByNumberAsc(String name);
+    List<ProductEntity> findByNameOrderByNumberDesc(String name);
+
+
+    List<ProductEntity> findByNameOrderByPriceAscStockDesc(String name);
+
 
 }
