@@ -1,6 +1,7 @@
-package com.springboot.advancedJPA.repository;
+package com.springboot.advancedJPA.data.repository;
 
-import com.springboot.advancedJPA.entity.ProductEntity;
+import com.springboot.advancedJPA.data.entity.ProductEntity;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -86,5 +87,7 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
 
     List<ProductEntity> findByNameOrderByPriceAscStockDesc(String name);
 
+
+    List<ProductEntity> findByName(String name, Sort sort);
 
 }

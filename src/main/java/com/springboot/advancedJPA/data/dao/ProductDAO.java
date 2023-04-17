@@ -1,6 +1,6 @@
 package com.springboot.advancedJPA.data.dao;
 
-import com.springboot.advancedJPA.entity.ProductEntity;
+import com.springboot.advancedJPA.data.entity.ProductEntity;
 
 public interface ProductDAO {
     ProductEntity insertProduct(ProductEntity entity);

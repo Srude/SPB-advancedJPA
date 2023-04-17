@@ -1,8 +1,8 @@
 package com.springboot.advancedJPA.data.dao.impl;
 
 import com.springboot.advancedJPA.data.dao.ProductDAO;
-import com.springboot.advancedJPA.entity.ProductEntity;
-import com.springboot.advancedJPA.repository.ProductRepository;
+import com.springboot.advancedJPA.data.entity.ProductEntity;
+import com.springboot.advancedJPA.data.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

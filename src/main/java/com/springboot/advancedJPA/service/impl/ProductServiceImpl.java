@@ -3,7 +3,7 @@ package com.springboot.advancedJPA.service.impl;
 import com.springboot.advancedJPA.data.dao.ProductDAO;
 import com.springboot.advancedJPA.data.dto.ProductDTO;
 import com.springboot.advancedJPA.data.dto.ProductResponseDTO;
-import com.springboot.advancedJPA.entity.ProductEntity;
+import com.springboot.advancedJPA.data.entity.ProductEntity;
 import com.springboot.advancedJPA.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
