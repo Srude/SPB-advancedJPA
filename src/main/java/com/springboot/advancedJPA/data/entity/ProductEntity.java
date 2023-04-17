@@ -1,9 +1,8 @@
-package com.springboot.advancedJPA.entity;
+package com.springboot.advancedJPA.data.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.databind.ser.Serializers;
+import lombok.*;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -11,8 +10,10 @@ import java.time.LocalDateTime;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 @Table(name = "product")
-public class ProductEntity {
+public class ProductEntity extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long number;
 
@@ -23,9 +24,5 @@ public class ProductEntity {
     private Integer price;
     @Column(nullable = false)
     private Integer stock;
-
-    private LocalDateTime createdAt;
-
-    private LocalDateTime updatedAt;
 
 }
