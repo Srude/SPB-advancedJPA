@@ -1,6 +1,8 @@
 package com.springboot.advancedJPA.data.repository;
 
 import com.springboot.advancedJPA.data.entity.ProductEntity;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -9,7 +11,7 @@ import java.util.Optional;
 
 public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
     Optional<ProductEntity> findByNumber(Long number);
-    List<ProductEntity> findallByName(String name);
+    List<ProductEntity> findAllByName(String name);
     ProductEntity queryByNumber(Long number);
 
 
@@ -44,10 +46,10 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
     List<ProductEntity> findByUpdatedAtIsNotNull();
 
 
-    ProductEntity findByisActiveTrue();
-    ProductEntity findByisActiveIsTrue();
-    ProductEntity findByisActiveFalse();
-    ProductEntity findByisActiveIsFalse();
+//    ProductEntity findByisActiveTrue();
+//    ProductEntity findByisActiveIsTrue();
+//    ProductEntity findByisActiveFalse();
+//    ProductEntity findByisActiveIsFalse();
 
 
     ProductEntity findByNumberAndName(Long number, String name);
@@ -89,5 +91,7 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
 
 
     List<ProductEntity> findByName(String name, Sort sort);
+
+    Page<ProductEntity> findByName(String name, Pageable pageable);
 
 }
